@@ -369,7 +369,7 @@ public class SamsungU8500RIL extends RIL implements CommandsInterface {
                       // We will print a list of such stale requests which
                       // haven't yet received a response. If the timeout fires
                       // first, then the wakelock is released without debugging.
-                    timeDiff = removalTime - rr.creationTime;
+                    //timeDiff = removalTime - rr.creationTime;
                     if ( timeDiff > mWakeLockTimeout ) {
                         Rlog.d(RILJ_LOG_TAG, "No response for [" + rr.mSerial + "] " +
                                 requestToString(rr.mRequest) + " after " + timeDiff + " milliseconds.");
