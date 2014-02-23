@@ -24,6 +24,10 @@ $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
+# TWRP fstab
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
+
 # Graphics
 PRODUCT_PACKAGES += \
     libblt_hw
