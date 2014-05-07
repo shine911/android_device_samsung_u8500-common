@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-INSTALLED_BOOTIMAGE_TARGET := $(PRODUCT_OUT)/ubuntu-boot.img
+INSTALLED_BOOTIMAGE_TARGET := $(PRODUCT_OUT)/android-boot.img
 
 uncompressed_ramdisk := $(PRODUCT_OUT)/ramdisk.cpio
 $(uncompressed_ramdisk): $(INSTALLED_RAMDISK_TARGET)

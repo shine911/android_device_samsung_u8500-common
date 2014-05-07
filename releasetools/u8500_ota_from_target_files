@@ -36,7 +36,7 @@ import u8500_edify_generator as edify_generator
 __doc__ = ota_from_target_files.__doc__
 
 def CopyBootFiles(input_zip, output_zip):
-    output_zip.write(os.path.join(TARGET_DIR, "ubuntu-boot.img"),"ubuntu-boot.img")
+    output_zip.write(os.path.join(TARGET_DIR, "android-boot.img"),"android-boot.img")
 
 def WriteFullOTAPackage(input_zip, output_zip):
   # TODO: how to determine this?  We don't know what version it will
@@ -91,7 +91,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
     script.RunBackup("restore")
 
   script.ShowProgress(0.2, 10)
-  script.EMMCWriteRawImage("/dev/block/mmcblk0p15", "ubuntu-boot.img")
+  script.EMMCWriteRawImage("/dev/block/mmcblk0p15", "android-boot.img")
 
   script.ShowProgress(0.1, 0)
   device_specific.FullOTA_InstallEnd()
