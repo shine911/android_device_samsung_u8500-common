@@ -49,6 +49,7 @@ TARGET_CPU_ABI2 := armeabi
 ARCH_ARM_HAVE_NEON := true
 TARGET_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
+ARM_EABI_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.9/bin
 
 # Kernel
 BOARD_KERNEL_PAGESIZE := 4096
