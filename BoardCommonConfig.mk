@@ -110,7 +110,6 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/musb-ux500.0/musb-hdrc
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/devices/virtual/power_supply/battery/lpm_mode
 
 # Recovery
-# BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/u8500-common/recovery/graphics.c
 BOARD_UMS_LUNFILE := "/sys/devices/platform/musb-ux500.0/musb-hdrc/gadget/lun0/file"
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/u8500-common/recovery/recovery_keys.c
 BOARD_USES_MMCUTILS := true
@@ -160,7 +159,7 @@ TW_CRYPTO_FS_OPTIONS := "noatime,nosuid,nodev,discard,noauto_da_alloc,journal_as
 TW_CRYPTO_FS_FLAGS := "0x00000406"
 TW_CRYPTO_KEY_LOC := "/efs/metadata"
 TW_INCLUDE_FUSE_EXFAT := true
-TW_BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/u8500-common/recovery/twrp-graphics.c
+TW_BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/u8500-common/recovery/graphics.c
 TW_BRIGHTNESS_PATH := /sys/class/backlight/panel/brightness
 TW_MAX_BRIGHTNESS := 255
 TW_NO_USB_STORAGE := true
