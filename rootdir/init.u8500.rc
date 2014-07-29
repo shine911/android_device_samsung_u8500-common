@@ -236,6 +236,13 @@ on post-fs-data
 
     # Change permissions for modem_log_relay config file
     chmod 666 /modemfs/trace_auto.conf
+    
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "interactive"
+    write /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay "20000 600000:40000 800000:20000"
+    write /sys/devices/system/cpu/cpufreq/interactive/timer_slack "-1 400000:30000 600000:40000 800000:20000"
+    write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time "40000 800000:80000"
+    write /sys/devices/system/cpu/cpufreq/interactive/timer_rate "60000 200000:40000 800000:30000 1000000:20000"
 
     # If there is no fs-post-data action in the init.<device>.rc file, you
     # must uncomment this line, otherwise encrypted filesystems
@@ -480,8 +487,8 @@ on property:sys.perf.profile=0
 
 # Balanced
 on property:sys.perf.profile=1
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor pegasusq
-    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor pegasusq
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor interactive
 
 # High performance
 on property:sys.perf.profile=2
